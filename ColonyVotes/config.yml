@@ -1,0 +1,2 @@
+command_rewards:
+  - "say %name% has voted"

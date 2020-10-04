@@ -1,0 +1,5 @@
+name: ColonyVotes
+version: 1.0
+author: ACrispyCookie
+main: net.colonymc.colonyvotes.spigot.Main
+depend: [ColonyAPI]
