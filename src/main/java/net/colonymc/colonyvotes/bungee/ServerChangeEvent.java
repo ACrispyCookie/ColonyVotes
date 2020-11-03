@@ -10,7 +10,7 @@ import net.md_5.bungee.event.EventHandler;
 
 public class ServerChangeEvent implements Listener {
 	
-	BungeeChannelManager bcm = new BungeeChannelManager();
+	final BungeeChannelManager bcm = new BungeeChannelManager();
 	
 	@EventHandler
 	public void onChange(ServerSwitchEvent e) {

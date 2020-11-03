@@ -14,26 +14,23 @@ public class Main extends Plugin {
 	
 	@Override
 	public void onEnable() {
-		Runnable run = new Runnable() {
-			@Override
-			public void run() {
-				try {
-					MainDatabase.isConnected();
-					checkForDatabase.cancel();
-					if(!MainDatabase.isConnecting()) {
-						if(MainDatabase.isConnected()) {
-							setupListeners();
-							setupCommands();
-							ProxyServer.getInstance().registerChannel("VoteChannel");
-							System.out.println("[ColonyVotes] has been successfully enabled!");
-						}
-						else {
-							System.out.println("[ColonyVotes] Couldn't connect to the main database!");
-						}
+		Runnable run = () -> {
+			try {
+				MainDatabase.isConnected();
+				checkForDatabase.cancel();
+				if(!MainDatabase.isConnecting()) {
+					if(MainDatabase.isConnected()) {
+						setupListeners();
+						setupCommands();
+						ProxyServer.getInstance().registerChannel("VoteChannel");
+						System.out.println("[ColonyVotes] has been successfully enabled!");
 					}
-				} catch(NoSuchMethodError e) {
-					
+					else {
+						System.out.println("[ColonyVotes] Couldn't connect to the main database!");
+					}
 				}
+			} catch(NoSuchMethodError ignored) {
+
 			}
 		};
 		checkForDatabase = ProxyServer.getInstance().getScheduler().schedule(this, run, 0, 2, TimeUnit.SECONDS);

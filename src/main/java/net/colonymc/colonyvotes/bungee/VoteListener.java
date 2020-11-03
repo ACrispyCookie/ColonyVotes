@@ -17,7 +17,7 @@ import net.md_5.bungee.event.EventHandler;
 
 public class VoteListener implements Listener {
 	
-	BungeeChannelManager bcm = new BungeeChannelManager();
+	final BungeeChannelManager bcm = new BungeeChannelManager();
 	
 	@EventHandler
 	public void onNewVote(VotifierEvent e) {
@@ -31,7 +31,7 @@ public class VoteListener implements Listener {
 				if(rs.next()) {
 					timesVoted = rs.getInt("timesVoted");
 				}
-				Set<String> queued = new HashSet<String>();
+				Set<String> queued = new HashSet<>();
 				queued.addAll(ProxyServer.getInstance().getServers().keySet());
 				if(ProxyServer.getInstance().getPlayer(username) != null) {
 					queued.remove(ProxyServer.getInstance().getPlayer(username).getServer().getInfo().getName());
