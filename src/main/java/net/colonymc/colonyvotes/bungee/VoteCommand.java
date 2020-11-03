@@ -14,7 +14,7 @@ public class VoteCommand extends Command {
 
 	@Override
 	public void execute(CommandSender sender, String[] args) {
-		TextComponent text = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &5&l» &fYou can vote for our network here: &dhttps://colonymc.net/vote"));
+		TextComponent text = new TextComponent(ChatColor.translateAlternateColorCodes('&', " &5&lÂ» &fYou can vote for our network here: &dhttps://colonymc.net/vote"));
 		text.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://colonymc.net/vote"));
 		sender.sendMessage(text);
 	}

@@ -11,12 +11,12 @@ public class Main extends JavaPlugin {
 		instance = this;
 		this.getServer().getMessenger().registerIncomingPluginChannel(this, "VoteChannel", new SpigotChannelManager());
 		this.saveDefaultConfig();
-		System.out.println(" » ColonyVotes has been successfully enabled!");
+		System.out.println(" Â» ColonyVotes has been successfully enabled!");
 	}
 	
 	@Override
 	public void onDisable() {
-		System.out.println(" » ColonyVotes has been successfully disabled!");
+		System.out.println(" Â» ColonyVotes has been successfully disabled!");
 	}
 	
 	public static Main getInstance() {

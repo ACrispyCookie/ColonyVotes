@@ -80,7 +80,7 @@ public class VoteListener implements Listener {
 
 	private void sendVoteMessage(String name) {
 		for(ProxiedPlayer p : ProxyServer.getInstance().getPlayers()) {
-			p.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', " &5&l» &d" + name + " &fhas voted for the server and received many rewards on every gamemode!")));
+			p.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', " &5&lÂ» &d" + name + " &fhas voted for the server and received many rewards on every gamemode!")));
 		}
 	}
 

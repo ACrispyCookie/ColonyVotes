@@ -50,7 +50,7 @@ public class Main extends Plugin {
 
 	@Override
 	public void onDisable() {
-		System.out.println(" » ColonyVotes has been successfully disabled!");
+		System.out.println(" Â» ColonyVotes has been successfully disabled!");
 	}
 	
 	public static Main getInstance() {
