@@ -9,6 +9,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../build tools/Votifier.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module" module-name="colonyspigotapi" scope="PROVIDED" />
     <orderEntry type="module" module-name="colonyapi" scope="PROVIDED" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT" level="project" />
@@ -25,14 +34,5 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: io.netty:netty-common:4.0.33.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.trove4j:trove4j:3.0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.guava:guava:18.0" level="project" />
-    <orderEntry type="module-library" scope="PROVIDED">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../build tools/Votifier.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>
