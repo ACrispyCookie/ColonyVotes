@@ -1,8 +1,6 @@
 package net.colonymc.colonyvotes.bungee;
 
-import java.util.concurrent.TimeUnit;
-
-import net.colonymc.colonyapi.MainDatabase;
+import net.colonymc.colonyapi.database.MainDatabase;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.scheduler.ScheduledTask;
@@ -14,26 +12,15 @@ public class Main extends Plugin {
 	
 	@Override
 	public void onEnable() {
-		Runnable run = () -> {
-			try {
-				MainDatabase.isConnected();
-				checkForDatabase.cancel();
-				if(!MainDatabase.isConnecting()) {
-					if(MainDatabase.isConnected()) {
-						setupListeners();
-						setupCommands();
-						ProxyServer.getInstance().registerChannel("VoteChannel");
-						System.out.println("[ColonyVotes] has been successfully enabled!");
-					}
-					else {
-						System.out.println("[ColonyVotes] Couldn't connect to the main database!");
-					}
-				}
-			} catch(NoSuchMethodError ignored) {
-
-			}
-		};
-		checkForDatabase = ProxyServer.getInstance().getScheduler().schedule(this, run, 0, 2, TimeUnit.SECONDS);
+		if(MainDatabase.isConnected()) {
+			setupListeners();
+			setupCommands();
+			ProxyServer.getInstance().registerChannel("VoteChannel");
+			System.out.println("[ColonyVotes] has been successfully enabled!");
+		}
+		else {
+			System.out.println("[ColonyVotes] Couldn't connect to the main database!");
+		}
 	}
 	
 	private void setupCommands() {

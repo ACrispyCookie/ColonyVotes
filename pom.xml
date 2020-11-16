@@ -41,18 +41,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>net.colonymc</groupId>
-            <artifactId>colonyspigotapi</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.colonymc</groupId>
-            <artifactId>colonyapi</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
@@ -70,6 +58,18 @@
             <artifactId>bungeecord-api</artifactId>
             <version>1.8-SNAPSHOT</version>
             <type>javadoc</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.colonymc</groupId>
+            <artifactId>colonyspigotapi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.colonymc</groupId>
+            <artifactId>colonyapi</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

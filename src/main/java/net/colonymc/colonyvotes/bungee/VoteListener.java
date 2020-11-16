@@ -7,7 +7,7 @@ import java.util.Set;
 
 import com.vexsoftware.votifier.model.VotifierEvent;
 
-import net.colonymc.colonyapi.MainDatabase;
+import net.colonymc.colonyapi.database.MainDatabase;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -31,8 +31,7 @@ public class VoteListener implements Listener {
 				if(rs.next()) {
 					timesVoted = rs.getInt("timesVoted");
 				}
-				Set<String> queued = new HashSet<>();
-				queued.addAll(ProxyServer.getInstance().getServers().keySet());
+                Set<String> queued = new HashSet<>(ProxyServer.getInstance().getServers().keySet());
 				if(ProxyServer.getInstance().getPlayer(username) != null) {
 					queued.remove(ProxyServer.getInstance().getPlayer(username).getServer().getInfo().getName());
 				}

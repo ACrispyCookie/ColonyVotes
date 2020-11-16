@@ -3,7 +3,7 @@ package net.colonymc.colonyvotes.bungee;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import net.colonymc.colonyapi.MainDatabase;
+import net.colonymc.colonyapi.database.MainDatabase;
 import net.md_5.bungee.api.event.ServerSwitchEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
