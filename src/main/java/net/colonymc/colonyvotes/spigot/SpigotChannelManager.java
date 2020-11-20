@@ -9,7 +9,7 @@ import org.bukkit.plugin.messaging.PluginMessageListener;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
 
-import net.colonymc.colonyspigotapi.player.ColonyPlayer;
+import net.colonymc.colonyspigotapi.api.player.ColonyPlayer;
 
 public class SpigotChannelManager implements PluginMessageListener {
 
